@@ -1,5 +1,7 @@
 #!/usr/bin/env tclsh8.5
 #
+# June 26 2010
+#
 # Usage: ./ud_vote.tcl <up or down> <definition id number>
 #
 # Get definition id number from visiting the definition and clicking the
@@ -13,11 +15,12 @@
 package require http
 
 namespace eval ud_vote {
+	variable useragent "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.1.6) Gecko/20091216 Firefox/3.0.6"
 	variable url http://www.urbandictionary.com/thumbs.php
 }
 
 proc ud_vote::vote {defid direction} {
-	http::config -useragent "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.1.6) Gecko/20091216 Firefox/3.0.6"
+	http::config -useragent $ud_vote::useragent
 
 	set headers [list X-Requested-With XMLHttpRequest X-Prototype-Version 1.6.0.3]
 	set query [http::formatQuery defid $defid direction $direction]
