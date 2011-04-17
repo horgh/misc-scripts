@@ -1,2 +1,3 @@
 ud_vote.tcl - script which votes a specified definition either up or down on urbandictionary.com
 git_sock_spew.tcl - script to call from git post-receive hook that sends a message to a given host/port. intended for use with eggdrop script svn.tcl
+youtube-dl-launcher.sh - launch & play videos from youtube using youtube-dl

@@ -13,7 +13,7 @@
 # Set ip and port to those matching svn.tcl
 #
 # Add call for this to file /bare_git_repo/hooks/post-receive as follows:
-# /path/to/git_sock_spew.tcl /path/to/repo
+# /path/to/git_sock_spew.tcl "/path/to/repo.git"
 #
 
 set ip 127.0.0.1
