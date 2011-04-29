@@ -10,7 +10,7 @@ package require http
 
 namespace eval website_checker {
 	variable sites [list www.storeylaw.com]
-	variable storage_dir /home/${::env(USER)}/.website_checker
+	variable storage_dir ${::env(HOME)}/.website_checker
 }
 
 proc ::website_checker::print_usage {} {
